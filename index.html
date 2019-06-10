@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Matching Game</title>
+  <!--This is the description to memory game-->
+  <meta name="description" content="memory game">
+  <!--This includes the viewport with width and initial-scale-->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--This is the icon for memory game project -->
+  <link rel="icon" href="./img/i.png">
+  <!--this url is for font style that connects directly to web-->
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <!--this url is for fonts.. that connects directly to web-->
+  <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+  <!--This link connects this html file to the external css named app.css-->
+</head>
+<link rel="stylesheet" href="css/app.css">
+
+<body>
+  <!--This is the main division and it contains all sub divisions-->
+  <div class="container">
+    <header>
+      <!--this is the header part of html containing a msg with Matching game-->
+      <h1>Matching Game</h1>
+    </header>
+    <!--this section displays the score of the player in the form of starRating-->
+    <section class="score-panel">
+      <ul class="stars">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul>
+      <!--  span combines the content i.e,combines moves&timer&restart-->
+      <span class="moves">0</span> Moves
+      <span>&nbsp &nbsp &nbsp Timer &nbsp<span class="min">00</span>:<span class="sec">00</span></span>
+      <!--this restart class helps for restarting the game-->
+      <div class="restart" onclick="restart()">
+        <i class="fa fa-repeat"></i>
+      </div>
+    </section>
+    <!--This deck class contains all the cards which contain different symbols on them-->
+    <ul class="deck">
+      <li class="card">
+        <i class="fa fa-diamond"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-paper-plane-o"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-anchor"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bolt"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-cube"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-anchor"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-leaf"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bicycle"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-diamond"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bomb"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-leaf"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bomb"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bolt"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-bicycle"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-paper-plane-o"></i>
+      </li>
+      <li class="card">
+        <i class="fa fa-cube"></i>
+      </li>
+    </ul>
+  </div>
+  <!--This class is used for defining modalbox after the game is over-->
+  <div class="modal">
+    <!--class for displaying popup window in the modalbox-->
+    <div class="popup">
+      <span class="close">&times;</span>
+      <!--Congratulations message-->
+      <div class="cong">
+        <h1><i>Congratulations</i></h1>
+      </div>
+      <!--this class is for displaying starRating in modalbox-->
+      <div class="st">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+      </div>
+      <!--this class is for displaying time in modalbox-->
+      <div class="t">
+      </div>
+      <div>
+        <!--class for calling playAgain function and for displaying the playAgain button-->
+        <button class="b" onclick="playAgain()">playAgain</button>
+      </div>
+    </div>
+  </div>
+  <!--Link to JavaScript file i.e,app.js-->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

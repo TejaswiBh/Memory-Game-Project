@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*styles for body*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* styles for Background pattern from Subtle Patterns */
+body {
+  background: #ffffff url('../img/geometry2.png');
+  font-family: 'Coda', cursive;
+}
+
+/* styles for container class*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+/*Styles for the deck of cards*/
+.deck {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+/* styles for all the cards*/
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #2e3d49;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+/*styles on opening card*/
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+}
+
+/*styles on displaying card*/
+.deck .card.show {
+  font-size: 33px;
+}
+
+/*card match style i.e,color to display when card matches*/
+.deck .card.match {
+  cursor: default;
+  background: #02ccba;
+  font-size: 33px;
+}
+
+/* Styles for the Score Panel*/
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+/*stars rating style*/
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
+
+/*styles for not displaying ordered list */
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+/*styles for restart */
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+/*styles on double clicking the same card nothing to happen*/
+.disabled {
+  pointer-events: none;
+}
+
+/*styles for modal box after the game is over*/
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+/*styles for popup window in modal box after the game is over*/
+.popup {
+  background-image: url("../img/ex.gif");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #F0E68C;
+  border-radius: 20px;
+  width: 70%;
+  height: 40%;
+  margin: 15%;
+  padding: 20px;
+  text-align: center;
+}
+
+/*styles for the button playAgain*/
+.p {
+  background-color: #DC143C;
+  border-radius: 10px;
+  color: white;
+}
+
+/*styles to show pointer when the mouse is over button playAgain*/
+.p:hover {
+  cursor: pointer;
+}
+
+/*style to display close buton*/
+.close {
+  color: white;
+  float: right;
+  background: cyan;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/*styles on moving the mouse over the close*/
+.close:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
